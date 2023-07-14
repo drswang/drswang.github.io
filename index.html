@@ -27,13 +27,16 @@
     
     .profile-photo {
       width: 200px; /* Adjust the width as needed */
+      height: 200px; /* Add the height to make it a perfect circle */
       border-radius: 50%; /* Apply a circular border */
+      object-fit: cover; /* Ensure the image fills the circular space */
+      overflow: hidden; /* Hide any overflowing content */
     }
   </style>
 </head>
 <body>
   <div class="content">
-    <img class="profile-photo" src="profile_photo.jpg" alt="Profile Photo">
+    <img class="profile-photo" src="pixel_tc.jpg" alt="Profile Photo">
     <h1>About me</h1>
     <p>Introduction to Shuai Wang - Assistant Professor specializing in climate science and meteorology.</p>
     

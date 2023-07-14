@@ -15,12 +15,18 @@
     }
     
     .profile-photo {
-      width: 200px; /* Adjust the width as needed */
-      height: 200px; /* Add the height to make it a perfect circle */
+      width: 100px; /* Adjust the width as needed */
+      height: 100px; /* Add the height to make it a perfect square */
       border-radius: 50%; /* Apply a circular border */
-      object-fit: cover; /* Ensure the image fills the circular space */
+      object-fit: cover; /* Ensure the image fills the square space */
       overflow: hidden; /* Hide any overflowing content */
-      margin-bottom: 20px;
+      margin-bottom: 10px;
+    }
+    
+    .team-member {
+      display: inline-block;
+      text-align: center;
+      margin-right: 20px;
     }
     
     hr {
@@ -43,7 +49,18 @@
       <p>Description of what the SWx Lab does.</p>
       
       <h2 class="section-header">The Team</h2>
-      <p>Information about the members of the SWx Lab team.</p>
+      <div class="team-member">
+        <img class="profile-photo" src="team/profile_photo_ShuaiWang.jpg" alt="Profile Photo">
+        <p>Name</p>
+      </div>
+      <div class="team-member">
+        <img class="profile-photo" src="team/profile_photo_ShuaiWang.jpg" alt="Profile Photo">
+        <p>Name</p>
+      </div>
+      <div class="team-member">
+        <img class="profile-photo" src="team/profile_photo_ShuaiWang.jpg" alt="Profile Photo">
+        <p>Name</p>
+      </div>
       
       <h2 class="section-header">Publications</h2>
       <p>List of publications by the SWx Lab.</p>

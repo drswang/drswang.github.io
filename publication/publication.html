@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TeX with Reference List</title>
+    <!-- Load MathJax script -->
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <!-- Load BibTeX-js script -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bibtex-js/1.0.6/bibtex.min.js"></script>
+</head>
+<body>
+    <h1>TeX with Reference List</h1>
+    <!-- Your TeX content will be rendered here -->
+    <div id="content">
+        Insert your TeX content here, and use \cite{key} to cite references.
+    </div>
+<script type="text/javascript">
+    // Load the BibTeX file
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', 'references.bib');
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                // Parse the BibTeX data
+                const bibtexData = xhr.responseText;
+                const bibliography = new BibtexParser().parse(bibtexData);
+
+                // Attach the bibliography to the references
+                const contentElement = document.getElementById('content');
+                contentElement.innerHTML += '<h2>References</h2>';
+                bibliography.entries$.forEach(entry => {
+                    const key = entry.key;
+                    const author = entry.entryTags.author;
+                    const title = entry.entryTags.title;
+                    const journal = entry.entryTags.journal;
+                    const year = entry.entryTags.year;
+                    const pages = entry.entryTags.pages;
+
+                    const reference = document.createElement('p');
+                    reference.innerHTML = `${author}. (${year}). ${title}. ${journal}, ${pages}.`;
+                    contentElement.appendChild(reference);
+                });
+
+                // Rerender TeX with MathJax to show citations properly
+                MathJax.Hub.Queue(['Typeset', MathJax.Hub, contentElement]);
+            } else {
+                console.error('Failed to load BibTeX file.');
+            }
+        }
+    };
+    xhr.send();
+</script>
+
+</body>
+</html>

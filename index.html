@@ -26,12 +26,16 @@
     
     .team-members {
       display: flex;
+      flex-wrap: wrap; /* Wrap items onto multiple lines */
       justify-content: center;
     }
     
     .team-member {
       text-align: center;
-      margin-right: 20px;
+      margin-bottom: 20px;
+      flex: 0 0 33.33%; /* Each team member occupies 33.33% of the available width */
+      box-sizing: border-box;
+      padding: 0 10px;
     }
     
     hr {
@@ -43,21 +47,6 @@
     .address {
       margin-top: 20px;
       font-size: 12px;
-    }
-    
-    @media only screen and (max-width: 500px) {
-      body {
-        margin: 10px;
-      }
-      
-      .team-members {
-        flex-wrap: wrap;
-      }
-      
-      .team-member {
-        margin-right: 0;
-        margin-bottom: 20px;
-      }
     }
   </style>
 </head>

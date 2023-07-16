@@ -57,18 +57,47 @@
     .italic {
       font-style: italic;
     }
+    
+    /* Add hanging indentation for publication item */
+    .publication-list {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .publication-item {
+      text-indent: -1.5em; /* Adjust the value as needed */
+    }
+
+    /* Vertically align "29" with "Publications" */
+    .publication-header {
+      display: flex;
+      align-items: baseline;
+    }
+
+    .publication-number {
+      margin-right: 5px; /* Adjust the value as needed */
+    }
   </style>
 </head>
 <body>
   <div class="content">
     <h1>SWx Lab</h1>
-    
-    <h2 class="section-header">Publications</h2>
-        <p>29. Li, Y., Tang, Y., Wang, S., Toumi, R., Song, X., and Wang, Q.. Recent Increases in Tropical Cyclone Rapid Intensification Events in Global Offshore Regions (accepted). Nature Communications.</p>
-        <p>28. Li, Y., Tang, Y., Wang, S., and Li, X.. Rapid growth of tropical cyclone outer size over the western North Pacific <a href="https://www.mdpi.com/2072-4292/15/2/486" target="_blank">link</a>. <span class="italic">Remote Sensing.</span></p>
-   
 
-    
+    <h2 class="section-header">Publications</h2>
+
+    <!-- Add the hanging indentation for the publication list -->
+    <ul class="publication-list">
+      <li class="publication-item">
+        <div class="publication-header">
+          <span class="publication-number">29.</span> Li, Y., Tang, Y., Wang, S., Toumi, R., Song, X., and Wang, Q.. Recent Increases in Tropical Cyclone Rapid Intensification Events in Global Offshore Regions (accepted). Nature Communications.
+        </div>
+      </li>
+      <li class="publication-item">
+        <p>28. Li, Y., Tang, Y., Wang, S., and Li, X.. Rapid growth of tropical cyclone outer size over the western North Pacific <a href="https://www.mdpi.com/2072-4292/15/2/486" target="_blank">link</a>. <span class="italic">Remote Sensing.</span></p>
+      </li>
+    </ul>
+    <!-- End of publication list -->
+
     <hr>
     
     <div class="address">

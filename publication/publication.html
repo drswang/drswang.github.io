@@ -1,215 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>SWx Lab</title>
-    <!-- Load MathJax script -->
-    <script type="text/javascript" async
-            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
-    <!-- Load BibTeX-js script -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bibtex-js/1.0.6/bibtex.min.js"></script>
+  <meta charset="UTF-8">
+  <title>SWx Lab</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    }
+    
+    .content {
+      max-width: 500px; /* Limits the width for iPhone-friendly layout */
+      padding: 20px;
+    }
+    
+    .section-header {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+    
+    .profile-photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+    
+    .team-members {
+      display: flex;
+      flex-wrap: wrap; /* Wrap items onto multiple lines */
+      justify-content: center;
+    }
+    
+    .team-member {
+      text-align: center;
+      margin-right: 20px;
+    }
+    
+    hr {
+      margin-top: 20px;
+      border: none;
+      border-top: 1px solid #000;
+    }
+    
+    .address {
+      margin-top: 20px;
+      font-size: 12px;
+    }
+  </style>
 </head>
 <body>
+  <div class="content">
     <h1>SWx Lab</h1>
-    <h2>Publications (updated to <span id="currentDate"></span>)</h2>
-
-    <!-- Your TeX content will be rendered here -->
-    <div id="content">
-
-        \documentclass[margin,line]{res}
-        % \usepackage[margin={1in}]{geometry}
-        \usepackage{hyperref}
-        \usepackage{enumitem}
-        \usepackage{lipsum}
-        \newcommand\reverselabel[1]{%
-          \def\theenumi{}%
-          \renewcommand\makelabel{\makebox[\dimexpr\labelwidth-3pt\relax][r]{%
-            \the\numexpr#1-\value{enumi}+1\relax}}}%
-        
-        \hypersetup{
-            colorlinks=true,
-            linkcolor=blue,
-            filecolor=black,      
-            urlcolor=blue,
-            pdftitle={Sharelatex Example},
-            pdfpagemode=FullScreen,
-            }
-        
-        
-        \begin{document}
-        \begin{description}
-        
-        \item[2023] (2 peer-reviewed papers)
-        
-        \begin{enumerate}[{start=29,label={\arabic*.}\addtocounter{enumi}{-2},leftmargin=-0.1in}]
-        
-        \item Li, Y., Tang, Y., \textbf{Wang, S.}, Toumi, R., Song, X., and Wang, Q.. Recent Increases in Tropical Cyclone Rapid Intensification Events in Global Offshore Regions (accepted). \textit{Nature Communications}.
-        
-        \item Li, Y., Tang, Y., \textbf{Wang, S.}, and Li, X.. Rapid growth of tropical cyclone outer size over the western North Pacific [\href{https://www.mdpi.com/2072-4292/15/2/486}{link}]. \textit{Remote Sensing}.
-        
-        \end{enumerate}
-        
-        \item[2022] (10 peer-reviewed papers + 1 white paper)
-        
-        \begin{enumerate}[{start=27,label={\arabic*.}\addtocounter{enumi}{-2},leftmargin=-0.1in}]
-        
-        
-        \item \textbf{Wang, S}, Lin, N., and Gori, A.. Investigation of hurricane complete wind models and application in storm surge simulation [\href{https://doi.org/10.1029/2021JD036359}{link}]. \textit{Journal of Geophysical Research - Atmospheres}.
-        
-        \item Xi, D., \textbf{Wang, S.}, and Lin, N.. Relationship Between Tropical Cyclone Intensity and Rain Rate [\href{http://doi.org/10.1175/JCLI-D-22-0141.1}{link}]. \textit{Journal of Climate}.
-        
-        \item Li, Y., Tang, Y., Toumi, R., and \textbf{Wang, S.}. Revisiting the definition of rapid intensification of tropical cyclones by clustering the initial intensity and inner-core size [\href{ 	
-        https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2022JD036870}{link}]. \textit{Journal of Geophysical Research - Atmospheres}. 
-        
-        \item Tian, D., Zhang, H., \textbf{Wang, S.}, Zhang, W., Sun, X., Zhou, Y., Yang, S., and Zhou., F. Sea surface wind structure observed by wave gliders during tropical cyclones [\href{https://doi.org/10.1029/2022JD037235}{link}]. \textit{Journal of Geophysical Research - Atmospheres}.
-        
-        \item Biffis, E. and \textbf{Wang, S.} (2022). Downscaling of physical risks for climate scenario design [\href{https://ink.library.smu.edu.sg/cgi/viewcontent.cgi?article=1017&context=skbi}{link}]. \textit{White Paper} published by the Singapore Management University. 
-        
-        \item Li, Y., Tang, Y. and \textbf{Wang, S.}. Rapid growth of outer size of tropical cyclones: A new perspective on their destructive potential [\href{https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2022GL099230}{link}]. \textit{Geophysical Research Letters}. \textbf{Editor's Highlight} on EOS [\href{https://eos.org/editor-highlights/the-rapid-growth-of-tropical-cyclones-outer-size-a-new-concept}{link}].
-        
-        \item \textbf{Wang, S.} and Toumi, R.. An analytic model of tropical cyclone outer size [\href{https://www.nature.com/articles/s41612-022-00270-6}{link}]. \textit{npj Climate and Atmospheric Science}.
-        
-        \item Xu, H., Tian, Z., Sun, L., Ragno, E., Bricker, J., Mao, G., Ye, Q., Tan, J., Wang, J., Ke, Q.,\textbf{Wang, S.} and Toumi, R.. Compound flood impact of water level and rainfall during tropical cyclone period in a coastal city: The case of Shanghai [\href{https://nhess.copernicus.org/preprints/nhess-2022-26/}{link}]. \textit{Natural Hazards and Earth System Sciences}.
-        
-        \item \textbf{Wang, S.} and Toumi, R. (2022). More tropical cyclones are striking coasts with major intensities at landfall [\href{https://www.nature.com/articles/s41598-022-09287-6}{link}]. \textit{Scientific Reports}.
-        
-        \item \textbf{Wang, S.} and Toumi, R. (2022). On the intensity decay of tropical cyclones before landfall [\href{https://www.nature.com/articles/s41598-022-07310-4#citeas}{link}]. \textit{Scientific Reports}. 
-        
-        \item Meng Q., Zhou F., Ma X., Xuan J., Zhang H., \textbf{Wang, S.} et al.. Response Process of Coastal Hypoxia to a Passing Typhoon in the East China Sea [\href{https://www.frontiersin.org/articles/10.3389/fmars.2022.892797/abstract}{link}]. \textit{Frontiers in Marine Science}.
-        \end{enumerate}
-        
-        % \vspace*{-.1in}
-        % \noindent\rule{6cm}{.1pt}
-        
-        \item[2021] (4 peer-reviewed papers)
-        
-        \begin{enumerate}[{start=16,label={\arabic*.}\addtocounter{enumi}{-2},leftmargin=-0.1in}]
-        
-        
-        \item \textbf{Wang, S.} and Toumi, R. (2021). Recent Migration of Tropical Cyclones toward Coasts [\href{https://science.sciencemag.org/content/371/6528/514.abstract}{link}]. \textit{Science}. 
-        
-        \item \textbf{Wang, S.} and Toumi, R. (2021). Recent tropical cyclone changes inferred from ocean surface temperature cold wakes [\href{https://www.nature.com/articles/s41598-021-01612-9}{link}]. \textit{Scientific Reports}. 
-        
-        \item \textbf{Wang, S.}, Toumi, R., Ye, Q., Ke, Q., Bricker, J., Tian, Z.* and Sun, L. (2021). Is the tropical cyclone surge in Shanghai more sensitive to landfall location or intensity change? [\href{https://rmets.onlinelibrary.wiley.com/doi/full/10.1002/asl.1058}{link}] \textit{Atmospheric Science Letters}. 
-        
-        \item Ke, Q., Yin, J., Bricker, J., Buonomo, E., Ye. Q., Visser, P.,
-        Dong, G., \textbf{Wang, S.}, Tian, Z., Sun, L., Toumi, R. and Jonkman, S. (2021). An integrated framework of coastal flood modelling under the failures of sea dikes: a case study in Shanghai [\href{https://link.springer.com/article/10.1007/s11069-021-04853-z}{link}]. \textit{Natural Hazards}. 
-        \end{enumerate}
-        
-        % \vspace*{-.1in}
-        % \noindent\rule{6cm}{.1pt}
-        
-        \item[2020] (2 peer-reviewed papers)
-        
-        \begin{enumerate}[{start=12,label={\arabic*.}\addtocounter{enumi}{-2},leftmargin=-0.1in}]
-        
-        
-        \item \textbf{Wang, S.}, Rashid, T., Throp, H. and Toumi, R. (2020). A shortening of the intensity life-cycle of major tropical cyclones [\href{https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020GL088589}{link}]. \textit{Geophysical Research Letters}. 
-        
-        \item Bruneau, N., \textbf{Wang, S.} and Toumi, R. (2020). Long memory impact of ocean mesoscale temperature anomalies on tropical cyclone size [\href{https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019GL086165}{link}]. \textit{Geophysical Research Letters}. 
-        \end{enumerate}
-        
-        % \vspace*{-.1in}
-        % \noindent\rule{6cm}{.1pt}
-        
-        \item[2019] (2 peer-reviewed papers)
-        
-        \begin{enumerate}[{start=10,label={\arabic*.}\addtocounter{enumi}{-2},leftmargin=-0.1in}]
-        
-        
-        \item Sparks, N., Hon, K., Chan. P., \textbf{Wang, S.}, Chan, J., Lee, T., and Toumi, R. (2019).
-        Aircraft Observations of Tropical Cyclone Boundary Layer Turbulence over the South China Sea [\href{https://journals.ametsoc.org/doi/abs/10.1175/JAS-D-19-0128.1?mobileUi=0}{link}]. \textit{Journal of the Atmospheric Science}. 
-        
-        \item \textbf{Wang, S.} and Toumi, R. (2019) Impact of dry midlevel air on the tropical cyclone outer circulation [\href{https://journals.ametsoc.org/doi/full/10.1175/JAS-D-18-0302.1}{link}]. \textit{Journal of the Atmospheric Science}.
-        \end{enumerate}
-        
-        % \vspace*{-.1in}
-        % \noindent\rule{6cm}{.1pt}
-        
-        \item[2018] (3 peer-reviewed papers)
-        
-        \begin{enumerate}[{start=8,label={\arabic*.}\addtocounter{enumi}{-2},leftmargin=-0.1in}]
-        
-        
-        \item \textbf{Wang, S.} and Toumi, R. (2018). A historical analysis of the mature stage of tropical cyclones [\href{https://rmets.onlinelibrary.wiley.com/doi/abs/10.1002/joc.5374}{link}]. \textit{International Journal of Climatology}. 
-        
-        \item \textbf{Wang, S.} and Toumi, R. (2018). Reduced sensitivity of tropical cyclone intensity and size to sea surface temperature in a radiative-convective equilibrium environment [\href{https://link.springer.com/article/10.1007/s00376-018-7277-5}{link}]. \textit{Advances in Atmospheric Science}. 
-        
-        \item Bruneau, N., Toumi, R. and \textbf{Wang, S.} (2018) Impact of wave white-capping on landfalling tropical cyclones [\href{https://www.nature.com/articles/s41598-017-19012-3}{link}]. \textit{Scientific Reports}. 
-        
-        \end{enumerate}
-        
-        \item[Before 2017] (5 peer-reviewed papers)
-        
-        \begin{enumerate}[{start=5,label={\arabic*.}\addtocounter{enumi}{-2},leftmargin=-0.1in}]
-        
-        \item \textbf{Wang, S.} and Toumi, R. (2016). On the relationship between hurricane cost and the integrated wind profile [\href{https://iopscience.iop.org/article/10.1088/1748-9326/11/11/114005/meta}{link}]. \textit{Environmental Research Letters}.
-        
-        \item \textbf{Wang, S.}, Toumi, R., Czaja, A. and Van Kan, A. (2015). An analytic model of tropical cyclone wind profiles [\href{https://rmets.onlinelibrary.wiley.com/doi/full/10.1002/qj.2586}{link}]. \textit{Quarterly Journal of the Royal Meteorological Society}. 
-        
-        \item Li, P., Fu, G., Lu, C., Fu, D., and \textbf{Wang, S.} (2012) The formation mechanism of a spring sea fog event over the yellow sea associated with a low-level jet [\href{https://journals.ametsoc.org/doi/full/10.1175/WAF-D-11-00152.1}{link}]. \textit{Weather and Forecasting}. 
-        
-        \item \textbf{Wang, S.}, Fu, G., and Pang, H. (2017). Structure analyses of the explosive extratropical cyclone: A case study over the Northwestern Pacific in March 2007 [\href{https://link.springer.com/article/10.1007/s11802-017-3287-7}{link}]. \textit{Oceanic and Coastal Sea Research}. 
-        
-        \item Fu, D., \textbf{Wang, S.}, Chen, D., Pang, H. and Li, P. (2012). Comparison study between observation and simulation for sea fog over the Yellow Sea in May 2009 [\href{https://link.springer.com/article/10.1007/s11802-012-1879-9}{link}]. \textit{Oceanic and Coastal Sea Research}. 
-        
-        \end{enumerate}
-        
-        \end{description}
-        \end{document}
-
-        
+    
+    <h2 class="section-header">Publications</h2>
+    
+    <hr>
+    
+    <div class="address">
+      SWx Lab, Department of Geography and Spatial Science, University of Delaware, DE
     </div>
-<script type="text/javascript">
-    // Function to get the current date in the format: YYYY-MM-DD
-    function getCurrentDate() {
-        const now = new Date();
-        const year = now.getFullYear();
-        const month = String(now.getMonth() + 1).padStart(2, '0');
-        const day = String(now.getDate()).padStart(2, '0');
-        return `${year}-${month}-${day}`;
-    }
-
-    // Update the "updated to date" with the current date
-    const currentDateElement = document.getElementById('currentDate');
-    currentDateElement.textContent = getCurrentDate();
-
-    // Load the BibTeX file
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', 'references.bib');
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-            if (xhr.status === 200) {
-                // Parse the BibTeX data
-                const bibtexData = xhr.responseText;
-                const bibliography = new BibtexParser().parse(bibtexData);
-
-                // Attach the bibliography to the references
-                const contentElement = document.getElementById('content');
-                contentElement.innerHTML += '<h2>References</h2>';
-                bibliography.entries$.forEach(entry => {
-                    const key = entry.key;
-                    const author = entry.entryTags.author;
-                    const title = entry.entryTags.title;
-                    const journal = entry.entryTags.journal;
-                    const year = entry.entryTags.year;
-                    const pages = entry.entryTags.pages;
-
-                    const reference = document.createElement('p');
-                    reference.innerHTML = `${author}. (${year}). ${title}. ${journal}, ${pages}.`;
-                    contentElement.appendChild(reference);
-                });
-
-                // Rerender TeX with MathJax to show citations properly
-                MathJax.Hub.Queue(['Typeset', MathJax.Hub, contentElement]);
-            } else {
-                console.error('Failed to load BibTeX file.');
-            }
-        }
-    };
-    xhr.send();
-</script>
-
+  </div>
 </body>
 </html>

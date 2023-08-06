@@ -48,13 +48,22 @@
     /* New rule for team members */
     .team-row {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center; /* Center align horizontally */
       margin-top: 20px;
     }
     
     .team-member {
       text-align: center;
       margin-right: 20px;
+    }
+
+    /* Adjustments for Shuai Wang PI */
+    .team-member p {
+      margin: 0; /* Remove default margin */
+    }
+    .profile-photo {
+      margin: 0 auto; /* Center align the photo */
     }
     
     hr {
@@ -86,7 +95,8 @@
     <div class="team-row">
       <div class="team-member">
         <img class="profile-photo" src="team/profile_photo_ShuaiWang.jpg" alt="Profile Photo">
-        <p><a href="team/profile_ShuaiWang.html">Shuai Wang</a><br>PI</p>
+        <p style="margin-top: 5px;"><a href="team/profile_ShuaiWang.html">Shuai Wang</a></p>
+        <p>PI</p>
       </div>
     </div>
     <div class="team-row">

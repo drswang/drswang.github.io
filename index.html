@@ -48,7 +48,8 @@
     /* New rule for team members */
     .team-row {
       display: flex;
-      justify-content: flex-start; /* Align to the left */
+      flex-direction: column;
+      align-items: center;
       margin-top: 20px;
     }
     
@@ -84,9 +85,10 @@
     
     <h2 class="section-header">The Team</h2>
     <div class="team-row">
-      <div class="team-member" style="text-align: left;"> <!-- Adjust alignment -->
+      <div class="team-member" style="text-align: center;"> <!-- Adjust alignment -->
         <img class="profile-photo" src="team/profile_photo_ShuaiWang.jpg" alt="Profile Photo">
-        <p><a href="team/profile_ShuaiWang.html">Shuai Wang</a><br>PI</p>
+        <p style="margin-top: 5px;"><a href="team/profile_ShuaiWang.html">Shuai Wang</a></p>
+        <p>PI</p>
       </div>
     </div>
     <div class="team-row">

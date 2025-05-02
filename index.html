@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>SWx Lab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
@@ -11,29 +12,31 @@
       align-items: center;
       min-height: 100vh;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-    }
-    
-    .content {
-      max-width: 500px; /* Limits the width for iPhone-friendly layout */
-      padding: 20px;
+      line-height: 1.5;
+      font-size: 16px;
     }
 
-    /* New rule for "SWx" */
-    h1 span.special-title {
-      background-color: black; /* Black background */
-      color: white; /* White font color */
-      padding: 5px; /* Add some padding for better visibility */
+    .content {
+      max-width: 800px;
+      padding: 20px;
+      width: 100%;
+      box-sizing: border-box;
     }
-    
+
+    h1 span.special-title {
+      background-color: black;
+      color: white;
+      padding: 5px;
+    }
+
     .section-header {
       font-size: 20px;
       margin-top: 20px;
     }
-    
-    /* Change hyperlink color to black */
+
     a {
       color: black;
-      text-decoration: underline; /* Add underline */
+      text-decoration: underline;
     }
 
     .profile-photo {
@@ -43,29 +46,44 @@
       object-fit: cover;
       overflow: hidden;
       margin-bottom: 0px;
+      max-width: 100%;
+      height: auto;
     }
 
-    /* New rule for team members */
     .team-row {
       display: flex;
-      justify-content: flex-start; /* Align to the left */
+      flex-wrap: wrap;
+      justify-content: flex-start;
       margin-top: 10px;
     }
-    
+
     .team-member {
       text-align: center;
       margin-right: 20px;
+      margin-bottom: 20px;
+      flex: 1 1 120px;
+      max-width: 150px;
     }
-    
+
     hr {
       margin-top: 20px;
       border: none;
       border-top: 1px solid #000;
     }
-    
+
     .address {
       margin-top: 20px;
       font-size: 12px;
+    }
+
+    @media (max-width: 600px) {
+      .content {
+        padding: 10px;
+      }
+
+      .team-member {
+        margin-right: 10px;
+      }
     }
   </style>
 </head>
@@ -73,7 +91,7 @@
   <div class="content">
     <h1><span class="special-title">SWx</span> Lab</h1>
     <p><b>Welcome to SWx: Severe Weather Research Lab</b></p>
-    
+
     <h2 class="section-header">What we do</h2>
     <p>We study severe weather systems in coastal regions, including:</p>
     <ul>
@@ -81,44 +99,45 @@
       <li>Unraveling their complexities when coupled</li>
       <li>Improving forecasting capabilities and preparedness</li>
     </ul>
-    
+
     <h2 class="section-header">The Team</h2>
     <div class="team-row">
       <div class="team-member">
-        <img class="profile-photo" src="team/profile_photo_ShuaiWang.jpg" alt="Profile Photo">
+        <img class="profile-photo" src="team/profile_photo_ShuaiWang.jpg" alt="Shuai Wang profile photo">
         <p><a href="team/profile_ShuaiWang.html">Shuai Wang</a><br>PI</p>
       </div>
     </div>
     <div class="team-row">
       <div class="team-member">
-        <img class="profile-photo" src="team/profile_photo_postdoc.png" alt="Profile Photo">
+        <img class="profile-photo" src="team/profile_photo_postdoc.png" alt="Postdoc placeholder photo">
         <p>Maybe you?<br>Postdoc</p>
       </div>
       <div class="team-member">
-        <img class="profile-photo" src="team/profile_photo_phd.png" alt="Profile Photo">
+        <img class="profile-photo" src="team/profile_photo_phd.png" alt="PhD placeholder photo">
         <p>Maybe you?<br>PhD candidate</p>
       </div>
       <div class="team-member">
-        <img class="profile-photo" src="team/profile_photo_ms.png" alt="Profile Photo">
+        <img class="profile-photo" src="team/profile_photo_ms.png" alt="MS placeholder photo">
         <p>Maybe you?<br>MS student</p>
       </div>
       <div class="team-member">
-        <img class="profile-photo" src="team/profile_photo_bs.png" alt="Profile Photo">
+        <img class="profile-photo" src="team/profile_photo_bs.png" alt="BS placeholder photo">
         <p>Maybe you?<br>BS student</p>
       </div>
     </div>
-    
+
     <h2 class="section-header">
       <a href="publication/publication.html">Publications</a>
     </h2>
-    
+
     <h2 class="section-header">Tools</h2>
-    
+
     <hr>
-    
+
     <div class="address">
       SWx Lab, Department of Geography and Spatial Science, University of Delaware, DE
     </div>
   </div>
 </body>
 </html>
+
